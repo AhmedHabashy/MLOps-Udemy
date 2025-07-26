@@ -11,12 +11,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    return "welcome to MLOps-Udemy. This course should be Great!"
+    return render_template('index.html')
 
-@app.route('/index')
+@app.route('/about')
 def index():
-    return "Welcome to MLOps-Udemy Index. This course should be Great!"
-
+    return render_template('about.html')
 
 
 if __name__ == '__main__':
